@@ -27,15 +27,9 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
         
-      - name: Build and push
-        uses: docker/build-push-action@v6
-        with:
-          context: app/
-          load: true
-          tags: ${{ env.TEST_TAG }}
           
       # Запуск тестов
-      - run: docker compose -f ./app/docker-compose.yml run --rm ${{ env.TEST_TAG }} npm test -s
+      - run: docker compose -f ./app/docker-compose.yml run --rm  npm test -s
 
       # Заливаем протестированный образ на Docker Hub
       - name: Build and push
