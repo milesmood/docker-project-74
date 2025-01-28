@@ -35,7 +35,7 @@ jobs:
           tags: ${{ env.TEST_TAG }}
           
       # Запуск тестов
-      - run: docker-compose -f dockerfile-compose.yml run --rm ${{ env.TEST_TAG }} npm test -s
+      - run: docker-compose -f app/dockerfile-compose.yml run --rm ${{ env.TEST_TAG }} npm test -s
 
       # Заливаем протестированный образ на Docker Hub
       - name: Build and push
