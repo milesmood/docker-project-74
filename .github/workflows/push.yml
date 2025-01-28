@@ -3,7 +3,7 @@ name: ci
 on:
   push:
       branches:
-        - 'main'
+        - 'master'
 env:
   LATEST_TAG: ukatherine/docker-project-74:latest
   TEST_TAG: ukatherine/docker-project-74:test
