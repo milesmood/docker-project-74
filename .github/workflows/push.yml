@@ -29,7 +29,7 @@ jobs:
         
           
       # Запуск тестов
-      - run: docker compose -f ./app/docker-compose.yml run --rm  npm test -s
+      - run: docker compose -f ./app/docker-compose.yml run --rm app npm test -s
 
       # Заливаем протестированный образ на Docker Hub
       - name: Build and push
