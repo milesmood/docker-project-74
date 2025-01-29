@@ -26,6 +26,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: app/
+          file: app/Dockerfile.production
           load: true
           tags: ${{ env.TEST_TAG }}
           
