@@ -28,7 +28,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
         
       # Запуск тестов
-      - run: docker compose -f app/docker-compose.yml run --rm app NODE_ENV=test npm test -s
+      - run: docker compose -f app/docker-compose.yml run --rm app make test
 
       # Заливаем протестированный образ на Docker Hub
       - name: Build and push
