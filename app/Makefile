@@ -39,7 +39,6 @@ up-flags:
 ci:
 	docker-compose -f dockerfile-compose.yml up 
 
-sleep:
-	bash -c 'sleep 3'
+
 
 
