@@ -8,8 +8,6 @@ services:
     image: ukatherine/docker-project-74
     depends_on:
       - db
-    restart: always
-    command: make test
 
   db:
     image: postgres:latest
