@@ -9,9 +9,6 @@ db-migrate:
 build:
 	npm run build
 
-prepare-env:
-	cp -n .env.example .env
-
 start:
 	NODE_ENV=production npm run start
 
@@ -19,7 +16,7 @@ dev:
 	npx concurrently "make start-frontend" "make start-backend"
 
 start-backend:
-	npm start -- --watch --verbose-watch --ignore-watch='node_modules .git .sqlite'
+	NODE_ENV=test npm start -- --watch --verbose-watch --ignore-watch='node_modules .git .sqlite'
 
 start-frontend:
 	npx webpack --watch --progress
@@ -40,4 +37,9 @@ up-flags:
 	docker-compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
 
 ci:
-	docker-compose -f dockerfile-compose.yml run --rm  make test
+	docker-compose -f dockerfile-compose.yml up 
+
+sleep:
+	bash -c 'sleep 3'
+
+
