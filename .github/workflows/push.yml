@@ -22,7 +22,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Run tests
-        run: export POSTGRES_USER=${{secrets.DATABASE_USERNAME}} export POSTGRES_PASSWORD=${{ secrets.DATABASE_PASSWORD }} export POSTGRES_HOST=${{ secrets.DATABASE_HOST }} docker compose -f app/docker-compose.yml up --abort-on-container-exit  
+        run:  docker compose -f app/docker-compose.yml up --abort-on-container-exit  
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
