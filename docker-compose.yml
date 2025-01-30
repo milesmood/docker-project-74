@@ -3,8 +3,8 @@ version: '3.2'
 services:
   app:
     build:
-      context: .
-      dockerfile: 'Dockerfile.production'
+      context: app
+      dockerfile: ../'Dockerfile.production'
     image: ukatherine/docker-project-74
     depends_on:
       - db

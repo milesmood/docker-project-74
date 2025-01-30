@@ -1,5 +1,5 @@
 node_modules/
 dist/
-app/.env
 *.sqlite
+app/.env
 .env

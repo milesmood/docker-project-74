@@ -3,12 +3,12 @@ version: '3.2'
 services:
   app:
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: app
+      dockerfile: ../Dockerfile
     #ports:
      # - '8080:8080'
     volumes:
-      - .:/app
+      - ./app:/app
     command: make dev
     restart: always
   
