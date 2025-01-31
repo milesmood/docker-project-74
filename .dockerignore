@@ -1,5 +1,9 @@
 node_modules/
+app/node_modules/
 dist/
+app/dist/
 *.sqlite
+app/*.sqlite
 app/.env
 .env
+app/.github
