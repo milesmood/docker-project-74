@@ -6,7 +6,10 @@ on:
         - 'master'
 env:
   LATEST_TAG:  ${{ secrets.DOCKERHUB_USERNAME }}/docker-project-74:latest
-  TEST_TAG:  ${{ secrets.DOCKERHUB_USERNAME }}/docker-project-74:test
+  TEST_TAG:  ${{ secrets.DOCKERHUB_USERNAME }}/docker-project-74:test    
+  DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME }}
+  DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+  DATABASE_HOST: ${{ secrets.DATABASE_HOST }}
   
 jobs:
   docker:
